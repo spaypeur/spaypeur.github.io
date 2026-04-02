@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofiane Hamzaoui · Cybersecurity Architect</title>
+  <meta name="description" content="Sofiane Hamzaoui (spaypeur) — Cybersecurity Architect 20+ years, C2 Developer, SS7/GTP Specialist, OSINT Analyst, Red Team Operator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">Sofiene <span class="name-green">Hamzaoui</span></div>
+      <div class="nav-links">
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#arsenal" data-i18n="nav_arsenal">Arsenal</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="Hamzaoui_Sofiene_CV_Complete.pdf" class="nav-cv" download data-i18n="nav_cv">↓ CV</a>
+      </div>
+      <div class="lang-switch">
+        <button class="lg active" data-lang="en">EN</button>
+        <button class="lg" data-lang="fr">FR</button>
+        <button class="lg" data-lang="ar">عربي</button>
+      </div>
+      <div class="nav-status"><span class="pulse"></span><span data-i18n="nav_online">ONLINE</span></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag" data-i18n="hero_tag">// CYBERSECURITY ARCHITECT</div>
+      <h1 class="hero-name">Hamzaoui<br><span class="name-green">Sofiene</span></h1>
+      <div class="hero-role"><span id="typed"></span><span class="cur blink">▮</span></div>
+      <p class="hero-desc" data-i18n="hero_desc">20+ years building offensive security tools, C2 frameworks, and mission-critical infrastructure. Trusted by governments and enterprises across Adarma, IronNet, and Rubica.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">20+</span><span class="stat-l" data-i18n="stat_years">Years Active</span></div>
+        <div class="sep">|</div>
+        <div class="stat"><span class="stat-n">147+</span><span class="stat-l" data-i18n="stat_repos">GitHub Repos</span></div>
+        <div class="sep">|</div>
+        <div class="stat"><span class="stat-n">15+</span><span class="stat-l" data-i18n="stat_missions">Major Missions</span></div>
+        <div class="sep">|</div>
+        <div class="stat"><span class="stat-n">50+</span><span class="stat-l" data-i18n="stat_tools">Security Tools</span></div>
+        <div class="sep">|</div>
+        <div class="stat"><span class="stat-n">5</span><span class="stat-l" data-i18n="stat_c2">C2 Frameworks</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary" data-i18n="btn_projects">View Projects</a>
+        <a href="Hamzaoui_Sofiene_CV_Complete.pdf" download class="btn-outline" data-i18n="btn_cv">Download CV</a>
+        <a href="https://github.com/spaypeur" target="_blank" class="btn-ghost">GitHub ↗</a>
+      </div>
+      <div class="hero-tags">
+        <span class="htag" data-i18n="tag_redteam">Red Team Ops</span>
+        <span class="htag" data-i18n="tag_c2">C2 Frameworks</span>
+        <span class="htag">SS7/GTP</span>
+        <span class="htag" data-i18n="tag_ios">iOS Security</span>
+        <span class="htag">OSINT</span>
+        <span class="htag">ZKP</span>
+        <span class="htag" data-i18n="tag_malware">Malware Dev</span>
+        <span class="htag" data-i18n="tag_ai">AI/LLM Security</span>
+        <span class="htag" data-i18n="tag_cve">CVE Research</span>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="ht-bar">
+        <span class="ht-dot r"></span><span class="ht-dot y"></span><span class="ht-dot g"></span>
+        <span class="ht-title">spaypeur@darknet:~</span>
+      </div>
+      <div class="ht-body" id="ht-body"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="s-inner">
+      <div class="s-hdr">
+        <div class="s-label">// 01</div>
+        <h2 class="s-title" data-i18n="sec_projects">Featured Projects</h2>
+        <div class="s-line"></div>
+        <div class="filters" id="filters">
+          <span class="pf active" data-f="all" data-i18n="f_all">All</span>
+          <span class="pf" data-f="redteam" data-i18n="f_redteam">Red Team</span>
+          <span class="pf" data-f="osint">OSINT</span>
+          <span class="pf" data-f="ios">iOS</span>
+          <span class="pf" data-f="ai">AI/LLM</span>
+          <span class="pf" data-f="crypto" data-i18n="f_crypto">Crypto</span>
+          <span class="pf" data-f="web">Web</span>
+          <span class="pf" data-f="hw" data-i18n="f_hw">Hardware</span>
+        </div>
+      </div>
+      <div class="proj-grid" id="proj-grid"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-alt">
+    <div class="s-inner">
+      <div class="s-hdr">
+        <div class="s-label">// 02</div>
+        <h2 class="s-title" data-i18n="sec_skills">Capabilities</h2>
+        <div class="s-line"></div>
+      </div>
+      <div class="skills-layout">
+        <div id="skills-bars"></div>
+        <div class="sk-right">
+          <div class="sk-block">
+            <div class="sk-block-title" data-i18n="sk_tech">Tech Stack</div>
+            <div class="sk-tags" id="tech-tags"></div>
+          </div>
+          <div class="sk-block">
+            <div class="sk-block-title" data-i18n="sk_tools">Security Tools</div>
+            <div class="sk-tags" id="tools-tags"></div>
+          </div>
+          <div class="sk-block">
+            <div class="sk-block-title" data-i18n="sk_langs">Languages</div>
+            <div class="sk-tags" id="lang-tags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="s-inner">
+      <div class="s-hdr">
+        <div class="s-label">// 03</div>
+        <h2 class="s-title" data-i18n="sec_exp">Experience</h2>
+        <div class="s-line"></div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section id="arsenal" class="bg-alt">
+    <div class="s-inner">
+      <div class="s-hdr">
+        <div class="s-label">// 04</div>
+        <h2 class="s-title" data-i18n="sec_arsenal">Tool Arsenal</h2>
+        <div class="s-sub" data-i18n="sec_arsenal_sub">@sniper4u2 · 131 repos &nbsp;|&nbsp; @spaypeur · 16 repos</div>
+        <div class="s-line"></div>
+      </div>
+      <div id="arsenal-list"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="s-inner">
+      <div class="s-hdr">
+        <div class="s-label">// 05</div>
+        <h2 class="s-title" data-i18n="sec_contact">Get In Touch</h2>
+        <div class="s-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-desc" data-i18n="contact_desc">Open for consulting, red team engagements, security architecture, and freelance work. Upwork Top Rated Plus — 100% mission success rate.</p>
+          <div id="contact-links"></div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-line"><span class="cc-k" data-i18n="cc_name">name</span><span class="cc-eq"> = </span><span class="cc-v">"Sofiane Hamzaoui"</span></div>
+          <div class="cc-line"><span class="cc-k">alias</span><span class="cc-eq"> = </span><span class="cc-v">["spaypeur", "sniper4u2"]</span></div>
+          <div class="cc-line"><span class="cc-k">email</span><span class="cc-eq"> = </span><span class="cc-v">"sofienehamzaoui2@gmail.com"</span></div>
+          <div class="cc-line"><span class="cc-k" data-i18n="cc_phone">phone</span><span class="cc-eq"> = </span><span class="cc-v">"+216 22 090 800"</span></div>
+          <div class="cc-line"><span class="cc-k" data-i18n="cc_loc">location</span><span class="cc-eq"> = </span><span class="cc-v cc-loc-val" data-i18n="cc_loc_val">"Tunisia · Remote"</span></div>
+          <div class="cc-line"><span class="cc-k" data-i18n="cc_status">status</span><span class="cc-eq"> = </span><span class="cc-v cc-green" data-i18n="cc_available">AVAILABLE</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>Sofiane Hamzaoui · spaypeur · sniper4u2</span>
+      <span data-i18n="footer_built">Built with terminal aesthetics · 2024</span>
+      <span class="cg">⚿ <span data-i18n="footer_enc">Encrypted</span></span>
+    </div>
+  </footer>
+
+  <!-- FLOATING TERMINAL -->
+  <div id="fterm">
+    <div class="ft-hdr" id="ft-toggle">
+      <span>⬛ Terminal</span><span id="ft-chev">▲</span>
+    </div>
+    <div class="ft-body" id="ft-body">
+      <div class="ft-out" id="ft-out"></div>
+      <div class="ft-in-row">
+        <span class="ft-p">$&nbsp;</span>
+        <input id="ft-in" class="ft-input" spellcheck="false" autocomplete="off" placeholder="help">
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-bg hidden" id="modal-bg">
+    <div class="modal-win">
+      <div class="modal-tb">
+        <div class="m-dots"><span class="dot dr" id="modal-close">✕</span><span class="dot dy"></span><span class="dot dg"></span></div>
+        <div id="modal-title" class="modal-ttl"></div>
+        <div></div>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
