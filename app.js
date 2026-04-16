@@ -3,7 +3,7 @@
 /* ========= TRANSLATIONS ========= */
 const T = {
   en:{
-    nav_projects:'Projects', nav_skills:'Skills', nav_experience:'Experience',
+    nav_projects:'Projects', nav_certificates:'Certificates', nav_skills:'Skills', nav_experience:'Experience',
     nav_arsenal:'Arsenal', nav_contact:'Contact', nav_cv:'↓ CV', nav_online:'ONLINE',
     hero_tag:'// CYBERSECURITY ARCHITECT',
     hero_desc:'20+ years building offensive security tools, C2 frameworks, and mission-critical infrastructure. Trusted by governments and enterprises across Adarma, IronNet, and Rubica.',
@@ -12,7 +12,7 @@ const T = {
     btn_projects:'View Projects', btn_cv:'Download CV',
     tag_redteam:'Red Team Ops', tag_c2:'C2 Frameworks', tag_ios:'iOS Security',
     tag_malware:'Malware Dev', tag_ai:'AI/LLM Security', tag_cve:'CVE Research',
-    sec_projects:'Featured Projects', sec_skills:'Capabilities',
+    sec_projects:'Featured Projects', sec_certificates:'Certifications & Achievements', sec_skills:'Capabilities',
     sec_exp:'Experience', sec_arsenal:'Tool Arsenal',
     sec_arsenal_sub:'@sniper4u2 · 131 repos | @spaypeur · 16 repos',
     sec_contact:'Get In Touch',
@@ -30,7 +30,7 @@ const T = {
            'Red Team Operator','Full-Stack Security Engineer'],
   },
   fr:{
-    nav_projects:'Projets', nav_skills:'Compétences', nav_experience:'Expérience',
+    nav_projects:'Projets', nav_certificates:'Certificats', nav_skills:'Compétences', nav_experience:'Expérience',
     nav_arsenal:'Arsenal', nav_contact:'Contact', nav_cv:'↓ CV', nav_online:'EN LIGNE',
     hero_tag:'// ARCHITECTE CYBERSÉCURITÉ',
     hero_desc:'Plus de 20 ans à concevoir des outils de sécurité offensive, des frameworks C2 et des infrastructures critiques. Approuvé par des gouvernements et entreprises chez Adarma, IronNet et Rubica.',
@@ -39,7 +39,7 @@ const T = {
     btn_projects:'Voir les Projets', btn_cv:'Télécharger CV',
     tag_redteam:'Red Team', tag_c2:'Frameworks C2', tag_ios:'Sécurité iOS',
     tag_malware:'Dév. Malware', tag_ai:'Sécurité IA/LLM', tag_cve:'Recherche CVE',
-    sec_projects:'Projets Vedettes', sec_skills:'Compétences',
+    sec_projects:'Projets Vedettes', sec_certificates:'Certifications & Réalisations', sec_skills:'Compétences',
     sec_exp:'Expérience', sec_arsenal:'Arsenal d\'Outils',
     sec_arsenal_sub:'@sniper4u2 · 131 dépôts | @spaypeur · 16 dépôts',
     sec_contact:'Me Contacter',
@@ -57,7 +57,7 @@ const T = {
            'Opérateur Red Team','Ingénieur Full-Stack Sécurité'],
   },
   ar:{
-    nav_projects:'المشاريع', nav_skills:'المهارات', nav_experience:'الخبرة',
+    nav_projects:'المشاريع', nav_certificates:'الشهادات', nav_skills:'المهارات', nav_experience:'الخبرة',
     nav_arsenal:'الترسانة', nav_contact:'التواصل', nav_cv:'↓ السيرة', nav_online:'متصل',
     hero_tag:'// مهندس الأمن السيبراني',
     hero_desc:'أكثر من 20 عامًا في بناء أدوات الأمن الهجومي، أطر C2، والبنية التحتية الحيوية. موثوق به من قِبل الحكومات والشركات الكبرى في Adarma وIronNet وRubica.',
@@ -66,7 +66,7 @@ const T = {
     btn_projects:'عرض المشاريع', btn_cv:'تحميل السيرة الذاتية',
     tag_redteam:'عمليات Red Team', tag_c2:'أطر C2', tag_ios:'أمن iOS',
     tag_malware:'تطوير البرمجيات الخبيثة', tag_ai:'أمن الذكاء الاصطناعي', tag_cve:'أبحاث CVE',
-    sec_projects:'المشاريع المميزة', sec_skills:'القدرات',
+    sec_projects:'المشاريع المميزة', sec_certificates:'الشهادات والإنجازات', sec_skills:'القدرات',
     sec_exp:'الخبرة المهنية', sec_arsenal:'ترسانة الأدوات',
     sec_arsenal_sub:'@sniper4u2 · 131 مستودع | @spaypeur · 16 مستودع',
     sec_contact:'تواصل معي',
@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   renderHeroTerminal();
   startTyping();
   renderProjects();
+  renderCertificates();
   renderSkills();
   renderExperience();
   renderArsenal();
@@ -510,4 +511,64 @@ function skillsIO(){
     }
   },{threshold:.15});
   const sec=document.getElementById('skills');if(sec)obs.observe(sec);
+}
+
+/* ========= CERTIFICATES ========= */
+const CERTS=[
+  {name:'Foundational C# with Microsoft',path:'CERTS/Foundational C# with MICROSOFT CERT.png'},
+  {name:'Frontend Dev Library V8',path:'CERTS/FrontendDevLibrary V8 CERT.png'},
+  {name:'Fundamentals Of LLMs',path:'CERTS/Fundumentals Of LLM\'s.png'},
+  {name:'HuggingFace Agent Course',path:'CERTS/HuggingFace AGENT COURSE CERT.png'},
+  {name:'Legacy Frontend Dev',path:'CERTS/Legacy Frontend dev CERT.png'},
+  {name:'Scientific Computing with Python',path:'CERTS/ScientificComputingWith PYTHON CERT.png'},
+  {name:'Web Design V8',path:'CERTS/WebDesign V8 CERT.png'},
+  {name:'Fundamentals of LLM Courses',path:'CERTS/fundamental of the llm courses CERT.png'},
+  {name:'Security Certification 2023',path:'CERTS/To Text 01-12-2023 04.51.jpg'},
+  {name:'Achievement Badge 1',path:'CERTS/1656392131272.png'},
+  {name:'Achievement Badge 2',path:'CERTS/1656392266799.png'},
+  {name:'Achievement Badge 3',path:'CERTS/1656392289426.png'},
+];
+
+function renderCertificates(){
+  const gallery=document.getElementById('cert-gallery');
+  if(!gallery) return;
+  gallery.innerHTML=CERTS.map(cert=>`
+    <div class="cert-card reveal" data-cert="${cert.name}" style="cursor:pointer;" onclick="viewCertificate('${cert.name}','${cert.path}')">
+      <div class="cert-img-wrap">
+        <img src="${cert.path}" alt="${cert.name}" class="cert-img" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="cert-label">
+        <span class="cert-name">${cert.name}</span>
+        <span class="cert-icon">📜</span>
+      </div>
+    </div>
+  `).join('');
+  scrollReveal();
+}
+
+function viewCertificate(name,path){
+  const modal=document.getElementById('modal-bg');
+  const title=document.getElementById('modal-title');
+  const body=document.getElementById('modal-body');
+  
+  title.textContent=name;
+  body.innerHTML=`
+    <div style="grid-column:1/-1;">
+      <div class="cert-modal-viewer">
+        <img src="${path}" alt="${name}" class="cert-modal-img" style="max-height:70vh;">
+        <div class="cert-modal-info">
+          <div class="cert-modal-col">
+            <h3>Certificate</h3>
+            <p>${name}</p>
+          </div>
+          <div class="cert-modal-col">
+            <h3>Type</h3>
+            <p>Professional Credential</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  modal.classList.remove('hidden');
+  modal.scrollTop=0;
 }
